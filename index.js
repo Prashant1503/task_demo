@@ -11,9 +11,8 @@ const app = express();
 const server = new ApolloServer({typeDefs,resolvers});
 server.applyMiddleware({app});
 
-app.use('/graphql',() => {
-    console.log(`Server listening on port : 4000`);
-})
+app.listen({ port: 4000 }, () => console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+);
 // server.listen({port : PORT},() => {
 //     console.log(`Server listening at http://localhost:4000${server.graphqlPath}`);
 // })
