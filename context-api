@@ -1,0 +1,34 @@
+****************************************************** Context-api ***********************************************************************************************************
+
+Steps to implement : 
+  
+    1) create context :
+          e.g   import React from "react";
+              const parentContext = React.createContext();
+              export default parentContext;
+              
+    
+    2) Create Provider component : 
+          
+          -> Import context from parentContext.
+          -> Create state.
+           -> Now use e.g (MyContext.Provider) and provide state to it as a value.
+           -> Wrap all children component inside MyContext.Provider component.
+           
+   
+   3) Create Consumer component :
+    
+       -> Import MyContext.
+       -> return (
+       
+            <MyContext.Consumer>
+              {context => (
+              
+                  // return tags
+              )}
+            
+            
+            </MyContext.Consumer>
+       
+       
+       );
